@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a0d6b80-3d8e-45ff-a2ff-57bde3efc98c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stopwatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/stopwatch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital clock.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
