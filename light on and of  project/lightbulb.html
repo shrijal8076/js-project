@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>lighton&off</title>
+    <style>
+        body{
+        background-color:#06403B ;
+        color:black;
+        position:relative;
+        height:100vh;
+
+
+        }
+        .container{
+        background-color:#06403B ;
+
+        position:absolute;
+        top:50%;
+        left:50%;
+        text-align:center;
+        transform:translate(-50%,-50%);
+        border-radius:50px;
+        padding:20px;
+        width:50%;
+        box-shadow:6px 6px 6px 5px  white;
+        }
+        .container h1{
+        color:white;
+        font-size:50px; margin-bottom:40px;
+        text-transform:uppercase;
+        }
+
+        .container .btn-container .btn{
+        background-color:white;
+        font-weight:bold;
+        padding:10px;
+        margin:10px;
+        border-radius:50px;
+
+        }
+
+    </style>
 </head>
 <body>
+<div class="container">
+    <h1>Switch On  And  Off Bulb</h1>
+    <img src="light-off.png" id="bulb">
+    <div class="btn-container">
+        <button class="btn" onclick="document.getElementById('bulb').src='light-on.png'">Ligh On</button>
+        <button class="btn" onclick="document.getElementById('bulb').src='light-off.png'">Ligh Off</button>
+    </div>
 
+
+</div>
 </body>
 </html>
