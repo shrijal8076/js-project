@@ -1,0 +1,118 @@
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
+body{
+background-color:#8B8CA2 ;
+}
+header{
+background-color:#03042A ;
+padding:20px;
+color:white;
+font-weight:bold;
+font-size:40px;
+display:flex;
+justify-content:space-between;
+}
+header .logo,.icon{
+cursor: pointer;
+}
+main{
+position:relative;
+}
+.add{
+top:130px;
+right:20px;
+position:fixed;}
+a {
+position:relative;
+z-index:1;
+transition:all.4s linear;
+overflow:hidden;
+color:white;
+border-radius:50px;
+border:2px solid white;
+padding:10px;
+font-weight:bold;
+font-size:22px;
+text-decoration:none;
+background-color:#03042A;
+text-transform:uppercase;
+
+}
+main .notes{
+position:absolute;
+top:200px;
+left:0px;
+
+width:100%;
+display:flex;
+flex-direction:row;
+padding:10px;
+flex-wrap:wrap;
+
+}
+main .notes .note{
+background-color:white;
+padding-top:35px;
+padding-left:20px;
+position:relative;
+width:310px;
+height:330px;
+border-radius:20px;
+margin:20px;
+
+}
+main .notes .note .opretion{
+position:absolute;
+top:8px;
+right:20px;
+
+}
+.opretion .edit{
+background-color:yellow;
+color:white ;
+font-size:20px;
+padding:10px;
+border-radius:50%;
+cursor:pointer;
+margin-right:5px;
+}
+.opretion .delete{
+background-color:red;
+color:white ;
+font-size:20px;
+padding:10px;
+border-radius:50%;
+cursor:pointer;
+margin-right:5px;
+}
+main .notes .note textarea{
+resize:none;
+width:310px;
+height:275px;
+font-size:15px;
+padding:25px;
+position:absolute;
+top:45px;
+left:0px;
+outline:none;
+border:none;
+
+}
+
+.hidden{
+display:none;
+}
+.note .main{
+width:310px;
+height:275px;
+font-size:15px;
+padding:25px;
+position:absolute;
+top:45px;
+left:0px;
+overflow:auto;
+
+}

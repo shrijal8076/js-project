@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         body{
+        background-color:#06403B ;
+        color:black;
+        position:relative;
+        height:100vh;
+        }
+        .container{
+        background-color:#06403B ;
+        position:absolute;
+        top:50%;
+        left:50%;
+
+        text-align:center;
+        transform:translate(-50%,-50%);
+        border-radius:50px;
+        padding:50px;
+        box-shadow:6px 6px 6px 5px  white;
+        display:flex;
+        flex-direction:row;
+        justify-content:around;
+        align-items:center;
+        flex-wrap:wrap;
+
+        }
+        .container .counter-container{margin:40px;}
+
+        .container .counter-container i{
+
+        margin-bottom:20px;
+        color:white;
+        }
+        .container .counter-container span{
+         font-size:30px;
+        margin-bottom:20px;
+        color:white;
+        font-weight:bold;
+        }
+        .counter-container{
+        color:yellow;
+        font-weight:bold;
+        font-size:45px;
+        }
+
+    </style>
+        <script src="https://kit.fontawesome.com/9b0b07e499.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="counter-container">
+        <i class="fas fa-mug-hot fa-3x"></i>
+        <div class="counter" data-target="4000"></div>
+        <span> Project Completed</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-users fa-3x"></i>
+        <div class="counter" data-target="10000"></div>
+        <span> Happy Clients</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-list-ul fa-3x"></i>
+        <div class="counter" data-target="15000"></div>
+        <span> Ongoing Project</span>
+    </div>
+
+</div>
+<script>
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach((counter) => {
+    console.log(counter);
+    counter.innerHTML=0;
+    const updateCounter = () =>{
+    const targetCount = +counter.getAttribute('data-target');
+    const startingCount = +counter.innerHTML;
+    const incr =targetCount / 100;
+
+    if(startingCount<targetCount){
+    counter.innerHTML=`${startingCount+incr}`;
+    setTimeout(updateCounter,10);
+    }
+    }
+    updateCounter();
+    })
+
+</script>
+</body>
+</html>
