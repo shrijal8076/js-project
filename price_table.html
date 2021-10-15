@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #2c3e50;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            /* position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            width: 100%;
+            border-radius: 50px;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            box-shadow: 8px 8px 50px 10px white;
+        }
+
+        .objects {
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            gap: 20px 100px;
+
+            padding: 20px;
+        }
+
+        .objects .box {
+            /* float: left; */
+            width: 350px;
+            margin-left: 40px;
+            border: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            border-radius: 50px;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.5);
+            color: #2c3e50;
+        }
+
+        .objects .box .price {
+            margin-bottom: 20px;
+            ;
+        }
+
+        .objects .box .price strong {
+            display: block;
+            font-size: 30px;
+            margin-bottom: -5px;
+        }
+
+        .objects .box .features>* {
+            color: #5987b6;
+            padding: 8px 0px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .objects .box .features .button {
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+
+        .objects .box .features .button button {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 17px;
+            background-color: none;
+            color: #2c3e50;
+            border: 2px solid white;
+        }
+
+        .objects .box .features .button button:hover {
+            background-color: #5987b6;
+            color: #fff;
+        }
+
+        .objects .box .title {
+            font-size: 30px;
+        }
+
+        .show {
+            display: block;
+
+        }
+
+        .button {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            border: 3px solid white;
+            outline: none;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+            background: none;
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+
+        }
+
+        .btn:hover {
+            background: white;
+            color: blue;
+        }
+
+        .btn.active {
+            background-color: blue;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button data-tabs="b" class="btn">beginner</button>
+            <button data-tabs=i class="btn">Intermidiate</button>
+            <button data-tabs="a" class="btn">advanced</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class='objects '>
+            <div class="box b  ">
+                <div class="title">Introduction to Coding</div>
+                <div class="price"><strong>$24.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box b  ">
+                <div class="title">App Developer Certificate</div>
+                <div class="price"><strong>$24.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box b  ">
+                <div class="title">Advance Coding with Space Tech</div>
+                <div class="price"><strong>$24.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box i  ">
+                <div class="title">Introduction to Coding</div>
+                <div class="price"><strong>$54.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box i  ">
+                <div class="title">App Developer Certificate</div>
+                <div class="price"><strong>$34.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box i ">
+                <div class="title">Advance Coding with Space Tech</div>
+                <div class="price"><strong>$34.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box a  ">
+                <div class="title">Introduction to Coding</div>
+                <div class="price"><strong>$84.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box a  ">
+                <div class="title">App Developer Certificate</div>
+                <div class="price"><strong>$84.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box a  ">
+                <div class="title">Advance Coding with Space Tech</div>
+                <div class="price"><strong>$84.99<span>/Month</span></strong></div>
+                <div class="features">
+                    <div>Curriculum Includes</div>
+                    <div>Sequence, Fundamentals Coding Blocks, Loops</div>
+                    <div><a href="#">
+                            View Detailed curriculum
+                        </a></div>
+                    <div>
+                        Achievements</div>
+                    <div class='button'>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- <div class='objects'>
+            <div class="box b ">Bp</div>
+            <div class="box b">Bj</div>
+            <div class="box b">Bc</div>
+            <div class="box b">BCpp</div>
+            <div class="box i">Ip</div>
+            <div class="box i">Ij</div>
+            <div class="box i">Ic</div>
+            <div class="box i">ICpp</div>
+            <div class="box a">Ap</div>
+            <div class="box a">Aj</div>
+            <div class="box a">Ac</div>
+            <div class="box a">ACpp</div>
+        </div> -->
+    </div>
+    <script>
+        var tabs = document.querySelectorAll(".buttons .btn ");
+        var beginners = document.querySelectorAll(".b");
+        var Intermidiates = document.querySelectorAll(".i");
+        var advanceds = document.querySelectorAll(".a");
+        var all = document.querySelectorAll(".box");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((tab) => { tab.classList.remove("active") });
+                tab.classList.add("active");
+                var tabval = tab.getAttribute("data-tabs");
+                all.forEach((item) => {
+                    item.style.display = "none";
+                })
+
+                //console.log(tabval)
+                if (tabval == "b") {
+                    beginners.forEach((b) => { b.style.display = "block"; })
+                }
+                else if (tabval == "i") {
+                    Intermidiates.forEach((i) => { i.style.display = "block"; })
+                }
+                else if (tabval == "a") {
+                    advanceds.forEach((a) => { a.style.display = "block"; })
+                }
+                else {
+                    beginners.forEach((b) => {
+                        b.style.display = "block";
+                    })
+                }
+            })
+        }) 
+    </script>
+</body>
+
+</html>
