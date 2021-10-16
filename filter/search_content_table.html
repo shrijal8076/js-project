@@ -3,13 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/9b0b07e499.js" crossorigin="anonymous"></script>
+    <title>table content search</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            position: relative;
+            background-color:#06403B ;
+        }
+        .container{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: aliceblue;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+        .container h1{
+            width: 100%;
+            text-align: center;
+            color: #06403B;
+            text-decoration: underline;
+            font-weight: 900;
+            
+        }
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            height: 500px;
+            border-collapse: collapse;
+            border: 1px solid #bdc3c7;
+            box-shadow: 2px 2px 12px rgba(0,0,0,.2);
+            margin-top: 10px;
+            font-size: 30px;
+            
+        }
+        table tr{
+            transition: all .2s ease-in;
+            cursor: pointer;
+            text-align: center;
+            
+        }
+        table tr td{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        #header{
+            background-color: #17857b;
+            color: beige;
+            height: 50px;
+        }
+        tr:hover{
+            background-color: #f5f5f5;
+            transform: scale(1.05);
+            box-shadow: 2px 2px 12px rgba(0,0,0,.2);
+            border-radius: 50px;
+
+        }
+        @media only screen and(max-width:768px) {
+            table{
+                width:90%;
+            }
+               
+        }
+        .search{display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        height: 100px;
+        width: 100%;
+        }
+        a,a:hover{
+            text-decoration: none;
+        }
+        .search-box{
+            position: relative;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .searchText{
+            border-radius:50px;
+            width: 0px;
+            border: none;
+            outline: none;
+            transition: all .3s linear;
+        }
+        .searchText:focus{
+            outline: none;
+        }
+        .searchBtn{
+            width:4rem;
+            height: 4rem;
+            background-color: #17857b;
+            color: antiquewhite;
+            display: grid;
+            position: absolute;
+            right: 1rem;
+            place-items: center;
+            border-radius: 50%;
+        }
+        .search-box:hover> .searchText{
+                width: 25rem;
+                padding: 2rem;           
+        }
+
+    </style>
 </head>
 <body>
-    <div class="table-container">
-        <h1 class=heading>Responsive</h1>
+  <div class="container">
+<h1>Filter table by Search</h1>
+<div class="search">
+    <div class="search-box">
+        <input type="text" class="searchText" id="myInput" placeholder="search-here" onkeyup="search()" >
+    <a href="#" class="searchBtn">
+        <i class="fas fa-search fa-2x"></i>
+    </a>    
     </div>
-    
+</div>
+
+<table id="myTable" >
+    <tr id="header">
+        <th style="width: 40%;">Name</th>
+        <th style="width: 20%;">Degree</th>
+        <th style="width: 40%;">Profession</th>
+    </tr>
+    <tr>
+        <td>vinod</td>
+        <td>MCS</td>
+        <td>Full statck Developer</td>
+    </tr>
+    <tr>
+        <td>thapa</td>
+        <td>MCa</td>
+        <td>Full statck Developer</td>
+    </tr>
+    <tr>
+            <td>gunjan</td>
+            <td>MCS</td>
+            <td>Full statck Developer</td>
+    </tr>
+    <tr>
+        <td>ginjan</td>
+        <td>MCS</td>
+        <td>Full statck Developer</td>
+    </tr>
+    <tr>
+        <td>shree</td>
+        <td>MCA</td>
+        <td>HR manager</td>
+    </tr>
+    <tr>
+        <td>ram</td>
+        <td>BCA</td>
+        <td>Full statck Developer</td>
+    </tr>
+    <tr>
+            <td>ronit</td>
+            <td>BCS</td>
+            <td>front end developer</td>
+    </tr>       
+       
+</table>  
+</div>  
+    <script>
+        const search = () =>{
+           let filter = document.getElementById("myInput").value.toUpperCase(); 
+           console.log(filter);
+            table = document.getElementById("myTable")
+        //    console.log(table)
+        const tr = table.getElementsByTagName("tr")
+        // console.log(tr);
+        for (var i =0; i<tr.length; i++){
+            let td = tr[i].getElementsByTagName("td")[0];
+            //  console.log(td);
+            if(td){
+                let textValue = td.textContent|| td.innerHTML;
+                if(textValue.toUpperCase().indexOf(filter)>-1){
+                    tr[i].style.display = "";
+                }
+                else{
+                    tr[i].style.display="none";
+                }
+            }
+
+
+        }
+        }    
+            
+    </script>
 </body>
 </html>
