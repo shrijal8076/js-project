@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>pop up modal</title>
+</head>
+<body>
+    <div class="main_container">
+        <form><label>Mobile Number</label>
+            <input type="tel" id="mobilenumber"><span id="message"></span>
+        </form>
+        <button class="btn_color" id="trigger">Submit</button>
+    </div>
+    
+    <div class="modal_wrapper">
+        
+        <div class="modal_container">
+            <button class="close">&times;</button>
+            <h2>enter otp you received on <br><br></h2>
+            <p></p>
+            <div class="user_input">
+                <input class="inp" value="" type="text"  maxlength="1"  >
+                <input class="inp" value=""  type="text"  maxlength="1" >
+                <input class="inp" value=""  type="text"  maxlength="1" >
+                <input class="inp" value=""  type="text"  maxlength="1" >
+                <input class="inp" value=""  type="text"  maxlength="1" >
+                <input class="inp" value=""  type="text"  maxlength="1" >
+                
+
+                
+                
+            </div>
+            <div class="action">
+                <button class="btn_color otp" >
+                    Verify OTP
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+</html>

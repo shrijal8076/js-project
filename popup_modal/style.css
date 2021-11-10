@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Domine&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;/*for smooth scrolling*/
+    
+}/*universal operator*/
+body{
+    background-color: darkslategray;
+    color: antiquewhite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    --main-font:'Domine', serif;
+    --heading-font:'Abril Fatface', cursive;
+}
+.main_container{
+    /* position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+}
+.modal_wrapper{
+opacity: 0;
+   position: fixed;
+   left: 0;
+   top: 0;
+   background-color:rgba(0, 0, 0,.5);
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   pointer-events: none;
+   transition: all .4s ease-in-out;
+}
+.modal_container{
+    background-color: rgb(29, 75, 59);
+    width: 70%;
+    border-radius: 50px;
+    padding: 25px;
+    position: relative;
+    transform:translateY(-100%);
+    transition: all .4s ease-in-out;
+
+}
+.modal_container h2{
+    margin-bottom: 20px;
+    font-family: var(--main-font);
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+.modal_container p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    
+}
+form label{
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.btn_color{
+    background-color: rgb(54, 133, 133);
+    color: rgb(250, 250, 250);
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-family: var(--main-font);
+    letter-spacing: 2.5px;
+    cursor: pointer;
+}
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.modal_container .close{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    background-color: transparent;
+    border: none;outline: none;
+    color: aliceblue;
+    font-size: 35px;
+    cursor: pointer;
+
+}
+.modal_container .close:hover{
+    color:rgb(54, 133, 133) ;
+}
+.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.error{
+    display: block;
+}
+.modal_wrapper.active .modal_container{
+    transform:translateY(0px);
+}
+.user_input{
+    display: flex;
+    justify-content: center;
+}
+.inp{
+    margin: 10px;
+    height: 35px;
+    width: 50px;
+    border:none;
+    color: azure;
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    background-color:transparent;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding: 20px;
+}
+#mobilenumber{
+    background-color:rgb(197, 223, 223);
+    outline: none;
+    border: none;
+    margin-bottom:30px;
+    padding: 20px;
+    color: azure;
+    font-size: 30px;
+}
+#mobilenumber:focus{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;  margin-bottom:30px;
+    padding: 20px;
+    color: azure;
+    font-size: 30px;
+
+}
+.main_container{
+    
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 0px 20px 10px white;
+}
